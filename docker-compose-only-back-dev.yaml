@@ -1,0 +1,29 @@
+version: "3"
+services:
+  server-dev:
+    build:
+      context: ./server
+
+    environment:
+      NODE_ENV: development
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db-dev
+      - mongo-dev
+    volumes:
+      - ./var/www/html/images:/var/www/html/images
+      - ./server:/server
+      - /server/node_modules
+
+  db-dev:
+    image: postgres:13.2-alpine
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=todo-dev
+
+  mongo-dev:
+    image: mongo:4.4.6-bionic
+volumes:
+  server-dev:
