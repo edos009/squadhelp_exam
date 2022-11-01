@@ -1,11 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import CONSTANTS from '../../constants.js';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const Logo = ({ to, ...props }) => (
-  <Link to={to}>
-    <img {...props} />
+import CONSTANTS from "../../constants.js";
+
+import styles from "./Logo.module.scss";
+
+const Logo = ({ to, src, alt }) => (
+  <Link to={to} className={styles.logo}>
+    <img src={src} alt={alt} />
   </Link>
 );
 
@@ -17,9 +20,9 @@ Logo.propTypes = {
 };
 
 Logo.defaultProps = {
-  to: '/',
+  to: "/",
   src: `${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`,
-  alt: 'logo',
+  alt: "logo",
 };
 
 export default Logo;
