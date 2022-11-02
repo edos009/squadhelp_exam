@@ -1,16 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Formik, Form } from "formik";
+
 import CONSTANTS from "../../constants";
 import { setOffer, clearAddOfferError } from "../../actions/actionCreator";
-import styles from "./OfferForm.module.sass";
 import ImageUpload from "../InputComponents/ImageUpload/ImageUpload";
 import FormInput from "../FormInput/FormInput";
 import Schems from "../../validators/validationSchems";
 import Error from "../Error/Error";
 
+import styles from "./OfferForm.module.sass";
+
 const OfferForm = (props) => {
-  console.log(props);
   const renderOfferInput = (formikProps) => {
     if (props.contestType === CONSTANTS.LOGO_CONTEST) {
       return (

@@ -23,11 +23,6 @@ const ImageUpload = ({
       <p className={cx({ [fileName]: formikProps?.values?.offerData.name })}>
         {formikProps?.values?.offerData.name}
       </p>
-      {/* <img
-        id="imagePreview"
-        className={cx({ [imgStyle]: formikProps?.values?.offerData.name })}
-        alt={formikProps?.values?.offerData.name}
-      /> */}
     </div>
   );
 };
