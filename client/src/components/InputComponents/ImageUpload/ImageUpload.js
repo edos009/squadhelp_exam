@@ -7,6 +7,7 @@ const ImageUpload = ({
   formikProps,
   classes: { uploadContainer, inputContainer, fileName },
 }) => {
+  console.log(formikProps);
   return (
     <div className={uploadContainer}>
       <div className={inputContainer}>
@@ -20,8 +21,8 @@ const ImageUpload = ({
         />
         <label htmlFor="fileInput">Choose file</label>
       </div>
-      <p className={cx({ [fileName]: formikProps?.values?.offerData.name })}>
-        {formikProps?.values?.offerData.name}
+      <p className={cx({ [fileName]: formikProps.values[name]?.name })}>
+        {formikProps.values[name]?.name}
       </p>
     </div>
   );

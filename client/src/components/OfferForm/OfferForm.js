@@ -45,7 +45,6 @@ const OfferForm = (props) => {
   const setOffer = (values, { resetForm }) => {
     props.clearOfferError();
     const data = new FormData();
-    console.log(data);
     const { contestId, contestType, customerId } = props;
     data.append("contestId", contestId);
     data.append("contestType", contestType);

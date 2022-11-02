@@ -21,12 +21,14 @@
   .imageUploadContainer
     display: flex
     flex-direction: column
-    justify-content: flex-start
+    justify-content: column
+    align-items: center
 
-    .imgStyle
-      width: 120px
-      height: 120px
-      align-self: center
+    .fileName
+      display: none
+
+    .fileName
+      display: block
 
     .uploadInputContainer
       display: flex
@@ -52,7 +54,6 @@
         color: white
         background-color: #455a89
         border-radius: 4px
-        align-self: flex-start
         cursor: pointer
 
         &:hover

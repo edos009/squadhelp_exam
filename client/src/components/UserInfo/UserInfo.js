@@ -6,13 +6,14 @@ import CONSTANTS from '../../constants';
 import styles from './UserInfo.module.sass';
 
 const UserInfo = (props) => {
-  const updateUserData = (values) => {
+  const updateUserData = (values, { resetForm }) => {
     const formData = new FormData();
-    formData.append('file', values.file);
-    formData.append('firstName', values.firstName);
-    formData.append('lastName', values.lastName);
-    formData.append('displayName', values.displayName);
+    formData.append("file", values.file);
+    formData.append("firstName", values.firstName);
+    formData.append("lastName", values.lastName);
+    formData.append("displayName", values.displayName);
     props.updateUser(formData);
+    resetForm();
   };
 
   const { isEdit, changeEditMode, data } = props;
