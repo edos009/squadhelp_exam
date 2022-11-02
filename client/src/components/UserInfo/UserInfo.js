@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import UpdateUserInfoForm from '../UpdateUserInfoForm/UpdateUserInfoForm';
 import { updateUserData, changeEditModeOnUserProfile } from '../../actions/actionCreator';
 import CONSTANTS from '../../constants';
+
 import styles from './UserInfo.module.sass';
 
 const UserInfo = (props) => {
