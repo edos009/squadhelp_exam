@@ -1,6 +1,6 @@
 const env = process.env.NODE_ENV || 'development';
 const serverIP = 'localhost';
-const serverPort = 3000;
+const serverPort = 5000;
 const CONSTANTS = {
   CUSTOMER: 'customer',
   CREATOR: 'creator',
@@ -20,7 +20,6 @@ const CONSTANTS = {
   publicURL: env === 'production'
     ? `http://${serverIP}:80/images/`
     : `http://${serverIP}:${serverPort}/images/`,
-    // : `http://${serverIP}:${serverPort}/public/images/`,
   NORMAL_PREVIEW_CHAT_MODE: 'NORMAL_PREVIEW_CHAT_MODE',
   FAVORITE_PREVIEW_CHAT_MODE: 'FAVORITE_PREVIEW_CHAT_MODE',
   BLOCKED_PREVIEW_CHAT_MODE: 'BLOCKED_PREVIEW_CHAT_MODE',

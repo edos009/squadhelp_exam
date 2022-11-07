@@ -14,7 +14,7 @@ const LoginPage = (props) => (
         <Logo src={`${CONSTANTS.STATIC_IMAGES_PATH}logo.png`} alt="logo" />
         <div className={styles.linkLoginContainer}>
           <Link
-            to="/registration"
+            to="/sign-up"
             style={{ textDecoration: 'none' }}
           >
             <span>Signup</span>

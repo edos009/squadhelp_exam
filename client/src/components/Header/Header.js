@@ -19,7 +19,7 @@ class Header extends React.Component {
   logOut = () => {
     localStorage.clear();
     this.props.clearUserStore();
-    this.props.history.replace("/login");
+    this.props.history.replace("/sign-in");
   };
 
   startContests = () => {
@@ -86,10 +86,10 @@ class Header extends React.Component {
     }
     return (
       <>
-        <Link to="/login" style={{ textDecoration: "none" }}>
+        <Link to="/sign-in" style={{ textDecoration: "none" }}>
           <span className={styles.btn}>LOGIN</span>
         </Link>
-        <Link to="/registration" style={{ textDecoration: "none" }}>
+        <Link to="/sign-up" style={{ textDecoration: "none" }}>
           <span className={styles.btn}>SIGN UP</span>
         </Link>
       </>
